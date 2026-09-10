@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocular Surface Disease Index (OSDI) Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ocular Surface Disease Index<sup>®</sup> (OSDI<sup>®</sup>)</h1>
+            <p class="subtitle">Please answer the following 12 questions about your eye symptoms during the last week.</p>
+        </div>
+
+        <form id="osdiForm">
+            <!-- SECTION 1: Symptoms Questions 1-5 -->
+            <section class="section">
+                <h2>Have you experienced any of the following <span class="highlight">during the last week?</span></h2>
+                
+                <div class="question-group">
+                    <div class="question">
+                        <label>1. Eyes that are sensitive to light?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q1" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>2. Eyes that feel gritty?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q2" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>3. Painful or sore eyes?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q3" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>4. Blurred vision?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q4" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>5. Poor vision?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q5" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subtotal-box">
+                    <label for="subtotalA">Subtotal score for answers 1 to 5 <strong>(A)</strong>:</label>
+                    <input type="text" id="subtotalA" readonly class="subtotal-display">
+                </div>
+            </section>
+
+            <!-- SECTION 2: Function Problems Questions 6-9 -->
+            <section class="section">
+                <h2>Have problems with your eyes limited you in performing any of the following <span class="highlight">during the last week?</span></h2>
+                
+                <div class="question-group">
+                    <div class="question">
+                        <label>6. Reading?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q6" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                            <label class="option na-option">
+                                <input type="radio" name="q6" value="NA" class="scoreInput"> N/A
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>7. Driving at night?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q7" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                            <label class="option na-option">
+                                <input type="radio" name="q7" value="NA" class="scoreInput"> N/A
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>8. Working with a computer or bank machine (ATM)?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q8" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                            <label class="option na-option">
+                                <input type="radio" name="q8" value="NA" class="scoreInput"> N/A
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>9. Watching TV?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q9" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                            <label class="option na-option">
+                                <input type="radio" name="q9" value="NA" class="scoreInput"> N/A
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subtotal-box">
+                    <label for="subtotalB">Subtotal score for answers 6 to 9 <strong>(B)</strong>:</label>
+                    <input type="text" id="subtotalB" readonly class="subtotal-display">
+                </div>
+            </section>
+
+            <!-- SECTION 3: Environmental Situations Questions 10-12 -->
+            <section class="section">
+                <h2>Have your eyes felt uncomfortable in any of the following <span class="highlight">during the last week?</span></h2>
+                
+                <div class="question-group">
+                    <div class="question">
+                        <label>10. Windy conditions?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q10" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                            <label class="option na-option">
+                                <input type="radio" name="q10" value="NA" class="scoreInput"> N/A
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>11. Places or areas with low humidity (very dry)?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q11" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q11" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q11" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q11" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q11" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                            <label class="option na-option">
+                                <input type="radio" name="q11" value="NA" class="scoreInput"> N/A
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>12. Areas that are air conditioned?</label>
+                        <div class="response-options">
+                            <label class="option">
+                                <input type="radio" name="q12" value="4" class="scoreInput"> All of the time (4)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q12" value="3" class="scoreInput"> Most of the time (3)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q12" value="2" class="scoreInput"> Half of the time (2)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q12" value="1" class="scoreInput"> Some of the time (1)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q12" value="0" class="scoreInput"> None of the time (0)
+                            </label>
+                            <label class="option na-option">
+                                <input type="radio" name="q12" value="NA" class="scoreInput"> N/A
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subtotal-box">
+                    <label for="subtotalC">Subtotal score for answers 10 to 12 <strong>(C)</strong>:</label>
+                    <input type="text" id="subtotalC" readonly class="subtotal-display">
+                </div>
+            </section>
+
+            <!-- SCORE CALCULATION SECTION -->
+            <section class="section score-section">
+                <div class="calculation-box">
+                    <label for="totalD">Add subtotals A, B, and C to obtain <strong>D</strong><br>(D = sum of scores for all questions answered):</label>
+                    <input type="text" id="totalD" readonly class="score-display">
+                </div>
+
+                <div class="calculation-box">
+                    <label for="totalE">Total number of questions answered<br><strong>(E)</strong> (do not include questions answered N/A):</label>
+                    <input type="text" id="totalE" readonly class="score-display">
+                </div>
+
+                <div class="osdi-score-box">
+                    <div class="osdi-formula">
+                        <strong>OSDI<sup>®</sup> = (D/25) / E</strong><br>
+                        <small>(Multiply by 25 if this is easier)</small>
+                    </div>
+                    <div class="final-score">
+                        <label for="osdiScore">OSDI<sup>®</sup> Score:</label>
+                        <input type="text" id="osdiScore" readonly class="final-score-display">
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERPRETATION SECTION -->
+            <section class="section interpretation-section">
+                <h2>Interpretation of Your OSDI Score</h2>
+                <div class="interpretation-scale">
+                    <div class="scale-item normal">
+                        <strong>0 - 23:</strong> Normal
+                    </div>
+                    <div class="scale-item mild">
+                        <strong>23 - 33:</strong> Mild
+                    </div>
+                    <div class="scale-item moderate">
+                        <strong>33 - 66:</strong> Moderate
+                    </div>
+                    <div class="scale-item severe">
+                        <strong>66 - 100:</strong> Severe
+                    </div>
+                </div>
+                <div class="result-box" id="resultBox">
+                    <p id="resultText">Complete the questionnaire to see your dry eye disease severity classification.</p>
+                </div>
+            </section>
+
+            <!-- PATIENT INFORMATION SECTION -->
+            <section class="section patient-info-section">
+                <h2>Patient Information</h2>
+                <div class="form-group">
+                    <label for="patientName">Patient Name:</label>
+                    <input type="text" id="patientName" placeholder="Enter patient name">
+                </div>
+                <div class="form-group">
+                    <label for="assessmentDate">Assessment Date:</label>
+                    <input type="date" id="assessmentDate">
+                </div>
+                <div class="form-group">
+                    <label for="diseaseHistory">How long has the patient experienced dry eye disease?</label>
+                    <input type="text" id="diseaseHistory" placeholder="e.g., 6 months, 1 year, etc.">
+                </div>
+                <div class="form-group">
+                    <label for="professionalComments">Eye Care Professional's Comments:</label>
+                    <textarea id="professionalComments" rows="4" placeholder="Enter any additional clinical notes"></textarea>
+                </div>
+            </section>
+
+            <!-- BUTTONS -->
+            <section class="section button-section">
+                <button type="button" class="btn btn-reset" onclick="resetForm()">Reset Form</button>
+                <button type="button" class="btn btn-print" onclick="printForm()">Print Report</button>
+                <button type="button" class="btn btn-download" onclick="downloadPDF()">Download PDF</button>
+            </section>
+        </form>
+
+        <footer class="footer">
+            <p>Copyright © 1995, Allergan, Inc.</p>
+            <p>OSDI® is a registered trademark of Allergan, Inc.</p>
+            <p>Reference: Schiffman RM, Christianson MD, Jacobsen G, Hirsch JD, Reis BL. Reliability and validity of the Ocular Surface Disease Index. <em>Arch Ophthalmol</em>. 2000;118:615-621.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
